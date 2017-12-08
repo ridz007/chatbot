@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1504.81">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 14.0px Courier; color: #d81b60; -webkit-text-stroke: #d81b60}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 14.0px Courier; color: #37474f; -webkit-text-stroke: #37474f}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 14.0px Courier; color: #37474f; -webkit-text-stroke: #37474f; min-height: 17.0px}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 14.0px Courier; color: #37474f; -webkit-text-stroke: #37474f; background-color: #f7f7f7}
+    span.s1 {font-kerning: none; background-color: #f7f7f7}
+    span.s2 {font-kerning: none; color: #3b78e7; background-color: #f7f7f7; -webkit-text-stroke: 0px #3b78e7}
+    span.s3 {font-kerning: none; color: #37474f; background-color: #f7f7f7; -webkit-text-stroke: 0px #37474f}
+    span.s4 {font-kerning: none; color: #0d904f; background-color: #f7f7f7; -webkit-text-stroke: 0px #0d904f}
+    span.s5 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">/*</span></p>
+<p class="p1"><span class="s1">* HTTP Cloud Function.</span></p>
+<p class="p1"><span class="s1">*</span></p>
+<p class="p1"><span class="s1">* @param {Object} req Cloud Function request context.</span></p>
+<p class="p1"><span class="s1">* @param {Object} res Cloud Function response context.</span></p>
+<p class="p1"><span class="s1">*/</span></p>
+<p class="p2"><span class="s1">exports.helloHttp = </span><span class="s2">function</span><span class="s1"> helloHttp (req, res) {</span></p>
+<p class="p1"><span class="s3">  response = </span><span class="s4">"This is a sample response from your webhook!"</span><span class="s3"> </span><span class="s1">//Default response from the webhook to show it's working</span></p>
+<p class="p3"><span class="s5"></span><br></p>
+<p class="p3"><span class="s5"></span><br></p>
+<p class="p1"><span class="s3">  res.setHeader(</span><span class="s4">'Content-Type'</span><span class="s3">, </span><span class="s4">'application/json'</span><span class="s3">); </span><span class="s1">//Requires application/json MIME type</span></p>
+<p class="p2"><span class="s1">  res.send(JSON.stringify({ </span><span class="s4">"speech"</span><span class="s1">: response, </span><span class="s4">"displayText"</span><span class="s1">: response<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s3">  </span><span class="s1">//"speech" is the spoken version of the response, "displayText" is the visual version</span></p>
+<p class="p2"><span class="s1">  }));</span></p>
+<p class="p4"><span class="s5">};</span></p>
+</body>
+</html>
